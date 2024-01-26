@@ -20,6 +20,8 @@ class ViewController: UIViewController {
     
     var webView = WKWebView()
     let button = UIButton(frame: .zero)
+    var webViewGoogle = WKWebView()
+    let buttonGoogle = UIButton(frame: .zero)
     let httpContent = """
     <!DOCTYPE html><html><body>
 
@@ -74,7 +76,8 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpwebView()
-        setUpButton()
+        setUpGoogleWebView()
+        setUpButtons()
         viewHierarchy()
         viewConstraints()
     }
@@ -82,8 +85,13 @@ class ViewController: UIViewController {
     func viewHierarchy() {
         webView.translatesAutoresizingMaskIntoConstraints = false
         button.translatesAutoresizingMaskIntoConstraints = false
+        webViewGoogle.translatesAutoresizingMaskIntoConstraints = false
+        buttonGoogle.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(webView)
         view.addSubview(button)
+        view.addSubview(webViewGoogle)
+        view.addSubview(buttonGoogle)
+
     }
     
     func viewConstraints() {
@@ -96,7 +104,17 @@ class ViewController: UIViewController {
             button.topAnchor.constraint(equalTo: webView.bottomAnchor, constant: 10),
             button.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
             button.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
-            button.heightAnchor.constraint(equalToConstant: 100)
+            button.heightAnchor.constraint(equalToConstant: 100),
+            
+            webViewGoogle.topAnchor.constraint(equalTo: button.bottomAnchor, constant: 10),
+            webViewGoogle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            webViewGoogle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            webViewGoogle.heightAnchor.constraint(equalToConstant: 300),
+            
+            buttonGoogle.topAnchor.constraint(equalTo: webViewGoogle.bottomAnchor, constant: 10),
+            buttonGoogle.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            buttonGoogle.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10),
+            buttonGoogle.heightAnchor.constraint(equalToConstant: 100)
             
         ])
         
@@ -111,15 +129,32 @@ class ViewController: UIViewController {
         webView.loadHTMLString(httpContent, baseURL: nil)
     }
     
-    func setUpButton() {
+    func setUpGoogleWebView() {
+        let link = URL(string: "https://www.google.com/?client=safari")!
+        let request = URLRequest(url: link)
+        webViewGoogle.load(request)
+    }
+    
+    func setUpButtons() {
         button.addTarget(self, action: #selector(buttonTaped), for: .touchUpInside)
         button.setTitle("Tap me", for: .normal)
         button.backgroundColor = .systemBlue
+        
+        buttonGoogle.addTarget(self, action: #selector(buttonGoogleTaped), for: .touchUpInside)
+        buttonGoogle.setTitle("Tap me for Google", for: .normal)
+        buttonGoogle.backgroundColor = .systemBlue
     }
     
     @objc func buttonTaped() {
         let jsCode = "document.getElementById('fname').value"
         webView.evaluateJavaScript(jsCode) { result, error in
+            print(result)
+        }
+    }
+    
+    @objc func buttonGoogleTaped() {
+        let jsCode = "document.body.style.backgroundColor = 'red';"
+        webViewGoogle.evaluateJavaScript(jsCode) { result, error in
             print(result)
         }
     }
