@@ -57,7 +57,7 @@ class ViewController: UIViewController {
 
     function onClick() {
 
-    window.webkit.messageHandlers.buttonOne.postMessage("Button Two One");
+    window.webkit.messageHandlers.buttonOne.postMessage("Button One Action");
 
     }
 
@@ -130,7 +130,7 @@ class ViewController: UIViewController {
     }
     
     func setUpGoogleWebView() {
-        let link = URL(string: "https://www.google.com/?client=safari")!
+        let link = URL(string: "https://www.google.com/")!
         let request = URLRequest(url: link)
         webViewGoogle.load(request)
     }
@@ -153,7 +153,8 @@ class ViewController: UIViewController {
     }
     
     @objc func buttonGoogleTaped() {
-        let jsCode = "document.body.style.backgroundColor = 'red';"
+        //SIvCob
+        let jsCode =  "document.getElementById('SIvCob').textContent = 'Hello world!';"
         webViewGoogle.evaluateJavaScript(jsCode) { result, error in
             print(result)
         }

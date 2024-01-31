@@ -1,6 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Bucket
-   uuid = "866DB75E-D1B4-4F35-B217-77D61AB2A007"
+   uuid = "0FE59189-1D49-4562-AB16-9457914E6804"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4C672470-E1A0-44A6-A2B8-C85714C16C3E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "JS comunication/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "buttonGoogleTaped()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "4C672470-E1A0-44A6-A2B8-C85714C16C3E - 77463f6e1cdaffe8"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JS_comunication.ViewController.buttonGoogleTaped() -&gt; ()"
+                  moduleName = "JS comunication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelzambranoquitian/Desktop/proyectos/2023-2/JS%20comunication/JS%20comunication/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "163"
+                  endingLineNumber = "163"
+                  offsetFromSymbolStart = "144">
+               </Location>
+               <Location
+                  uuid = "4C672470-E1A0-44A6-A2B8-C85714C16C3E - ccd452083a359828"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JS_comunication.ViewController.buttonGoogleTaped() -&gt; ()"
+                  moduleName = "JS comunication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelzambranoquitian/Desktop/proyectos/2023-2/JS%20comunication/JS%20comunication/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "161"
+                  endingLineNumber = "161"
+                  offsetFromSymbolStart = "96">
+               </Location>
+               <Location
+                  uuid = "4C672470-E1A0-44A6-A2B8-C85714C16C3E - 77463f6e1cdaff17"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JS_comunication.ViewController.buttonGoogleTaped() -&gt; ()"
+                  moduleName = "JS comunication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelzambranoquitian/Desktop/proyectos/2023-2/JS%20comunication/JS%20comunication/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "92">
+               </Location>
+               <Location
+                  uuid = "4C672470-E1A0-44A6-A2B8-C85714C16C3E - ccd452083a359809"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Any&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in JS_comunication.ViewController.buttonGoogleTaped() -&gt; ()"
+                  moduleName = "JS comunication"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/emmanuelzambranoquitian/Desktop/proyectos/2023-2/JS%20comunication/JS%20comunication/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "160"
+                  endingLineNumber = "160"
+                  offsetFromSymbolStart = "56">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
